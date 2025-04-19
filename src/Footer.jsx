@@ -1,8 +1,8 @@
 function Footer(){
     return (
         <>
-        <footer className="bg-gray-800 text-white p-4 text-center">
-            test
+        <footer className="bg-main text-black p-4 text-center">
+            &copy; {new Date().getFullYear()}
         </footer>
         </>
     )

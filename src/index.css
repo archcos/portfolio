@@ -11,3 +11,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.bg-main {
+  background-color: #D9E5D6;
+}
+
+.bg-light {
+  background-color: #686963;
+}
+
+.bg-dark {
+  background-color: #161032
+}
