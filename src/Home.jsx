@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import useInView from './hooks/useInView';
-import PHPlogo from './assets/php.svg';
-import Reactlogo from './assets/react.svg';
-import Pythonlogo from './assets/python.svg';
+import FRAMElogo from './assets/framework.svg';
+import LIBRARYlogo from './assets/library.svg';
+import PROGRAMMINGlogo from './assets/programming.svg';
 import HTMLlogo from './assets/html.svg';
 
 function Home () {
@@ -35,20 +35,38 @@ function Home () {
                 </section>
                 {/*Techstacks*/}
                 <section ref={techRef}  className="flex bg-dark p-8">
-                    <section className="text-white w-1/4 h-40 flex items-center justify-center">
-                        <img src={Reactlogo} alt="react" className={`w-20 h-20 transition-transform duration-700 transform 
+                    <div>
+                        <p>
+                            Techstack
+                        </p>
+                    </div>
+                    <section className="w-1/3 h-40 items-center justify-center">
+                        <img src={PROGRAMMINGlogo} alt="programming language" className={`w-20 h-20 transition-transform duration-700 transform 
+                            ${techInView ? 'translate-x-0' : 'translate-x-full'} ease-in-out`} />
+                            <li className="relative group rounded cursor-pointer list-none">
+                                <span className="text-white block transition-all duration-300 px-2 py-1 rounded">
+                                Programming Languages
+                                </span>
+                                <ul className="absolute hidden group-hover:block top-full left-0 bg-white shadow-lg rounded-md mt-1 min-w-[150px]">
+                                    <li className="px-4 py-2 hover:bg-gray-200">
+                                        <a href="/services/web">Web Development</a>
+                                    </li>
+                                    <li className="px-4 py-2 hover:bg-gray-200">
+                                        <a href="/services/design">Graphic Design</a>
+                                    </li>
+                                    <li className="px-4 py-2 hover:bg-gray-200">
+                                        <a href="/services/seo">SEO Optimization</a>
+                                    </li>
+                                </ul>
+                            </li>
+                    </section>
+                    <section className="text-white w-1/3 h-40 flex items-center justify-center">
+                        <label htmlFor="title"></label>
+                        <img src={FRAMElogo} alt="frameworks" className={`w-20 h-20 transition-transform duration-700 transform 
                             ${techInView ? 'translate-x-0' : 'translate-x-full'} ease-in-out`} />
                     </section>
-                    <section className="text-white w-1/4 h-40 flex items-center justify-center">
-                        <img src={PHPlogo} alt="react" className={`w-30 h-30 transition-transform duration-700 transform 
-                            ${techInView ? 'translate-x-0' : 'translate-x-full'} ease-in-out`} />
-                    </section>
-                    <section className="text-white w-1/4 h-40 flex items-center justify-center">
-                        <img src={Pythonlogo} alt="react" className={`w-30 h-30 transition-transform duration-700 transform 
-                            ${techInView ? 'translate-x-0' : 'translate-x-full'} ease-in-out`} />
-                    </section>
-                    <section className="text-black w-1/4 h-40 flex items-center justify-center">
-                        <img src={HTMLlogo} alt="react" className={`w-30 h-30 transition-transform duration-700 transform 
+                    <section className="text-white w-1/3 h-40 flex items-center justify-center">
+                        <img src={LIBRARYlogo} alt="library" className={`w-20 h-20 transition-transform duration-700 transform 
                             ${techInView ? 'translate-x-0' : 'translate-x-full'} ease-in-out`} />
                     </section>
                 </section>
